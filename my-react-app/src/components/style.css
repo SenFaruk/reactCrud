@@ -1,0 +1,21 @@
+
+
+.eventolayı{
+    border:3px solid red;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: fit-content;
+}
+.useStateHooks{
+    border:5px solid chartreuse;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    margin-top: 20px;
+
+}
+.useStateHooks h1{
+    color:brown
+}

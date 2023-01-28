@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Event from "./components/Event";
+import Header from "./components/Header";
+import MapFunction from "./components/MapFunction";
+import UseStateHook from "./components/UseStateHook";
+
+
 
 function App() {
+  const clickMe=(adın)=>{
+    console.log("ismin:"+adın);
+  }
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <Header/>
+  <button onClick={()=>clickMe("faruk")}>clickme</button>
     </div>
+    <Event/>
+    <UseStateHook/>
+    <MapFunction/>
+    </>
   );
 }
 
