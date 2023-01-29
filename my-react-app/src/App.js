@@ -109,41 +109,68 @@
 
 // #10. React Router
 
-import { useState } from "react";
-import ProductList from "./components/ProductList";
+// import { useState } from "react";
+// import ProductList from "./components/ProductList";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
+
+// function App() {
+//   const [products, setProducts] = useState([
+//     { id: 1, title: "Product 1", price: 899 },
+//     { id: 2, title: "Product 2", price: 982 },
+//     { id: 3, title: "Product 3", price: 322 },
+//     { id: 4, title: "Product 4", price: 763 },
+//     { id: 5, title: "Product 5", price: 389 },
+//   ]);
+
+//   const deleteProduct = (productId) => {
+//     const newProducts = products.filter((product) => product.id !== productId);
+//     setProducts(newProducts);
+//   };
+
+//   return (
+//     <div>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route
+//             path="/"
+//             element={
+//               <ProductList products={products} deleteProduct={deleteProduct} />
+//             }
+//           />
+
+//           <Route path="/about" element={<About />} />
+//           <Route path="/contact" element={<Contact />} />
+//         </Routes>
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// ===databaseli kısım
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import ProductList from "./components/ProductList";
+import AddProduct from "./components/AddProduct";
+import EditProduct from "./components/EditProduct";
 
 function App() {
-  const [products, setProducts] = useState([
-    { id: 1, title: "Product 1", price: 899 },
-    { id: 2, title: "Product 2", price: 982 },
-    { id: 3, title: "Product 3", price: 322 },
-    { id: 4, title: "Product 4", price: 763 },
-    { id: 5, title: "Product 5", price: 389 },
-  ]);
-
-  const deleteProduct = (productId) => {
-    const newProducts = products.filter((product) => product.id !== productId);
-    setProducts(newProducts);
-  };
-
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <ProductList products={products} deleteProduct={deleteProduct} />
-            }
-          />
-
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="container">
+      <div className="columns">
+        <div className="column is-half is-offset-one-quarter">
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<ProductList />} />
+              <Route path="/add" element={<AddProduct />} />
+              <Route path="/edit/:id" element={<EditProduct />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div>
     </div>
   );
 }
