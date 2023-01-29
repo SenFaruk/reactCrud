@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 const MapFunction = () => {
   const [products, setProducts] = useState([
@@ -15,11 +15,18 @@ const MapFunction = () => {
         <ul>
           {products.map((product) => (
             <li key={product.id}>
-           
-           {product.id} ==== {product.title} - {product.price}
+              {product.id} ==== {product.title} - {product.price}
             </li>
           ))}
         </ul>
+        <hr />
+       <ul>
+        {products.map((product)=>(
+          <li>
+            {product.title}
+          </li>
+        ))}
+       </ul>
       </div>
     </>
   );

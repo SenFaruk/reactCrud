@@ -8,8 +8,13 @@ const Event = () => {
   return (
     <>
     <div className="eventolayı">
-        <h1>burada eventi anlatmaya çalıştık</h1>
+        <h1>burada eventi anlatmaya çalıştık </h1>
          <button onClick = {()=>{clickMe("faruk")}}>clickme</button>
+    </div>
+    <div className="eventolayı">
+        <h1>burada eventi anlatmaya çalıştık </h1>
+         <button onClick = {()=>{clickMe("faruk")}}>clickme</button>
+         
     </div>
     
 
