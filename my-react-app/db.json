@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "title": "salatalık",
+      "price": 322,
+      "id": 3
+    },
+    {
+      "title": "ürün 5",
+      "price": "2874366",
+      "id": 5
+    },
+    {
+      "title": "karpuz",
+      "price": "120 tl",
+      "id": 7
+    },
+    {
+      "title": "domates",
+      "price": "120",
+      "id": 8
+    }
+  ]
+}
